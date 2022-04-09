@@ -26,7 +26,7 @@ def predict_named():
 def predict_unnamed(v_1,v_2,v_3,v_4,v_5,v_6,v_7):
     """This function gets the unnamed args from the api and predicts the label"""
     prediction = model.predict([[v_1,v_2,v_3,v_4,v_5,v_6,v_7]])
-    return jsonify({'Prediction ': int(prediction) })
+    return jsonify(int(prediction))
 
 @app.route('/predictBodyNamed',methods = ['GET','POST'])
 def predict_body_named():
