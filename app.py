@@ -20,7 +20,7 @@ def predict_named():
     v_6=int(request.args.get('v6'))
     v_7=int(request.args.get('v7'))
     prediction = model.predict([[v_1,v_2,v_3,v_4,v_5,v_6,v_7]])
-    return jsonify({'Prediction ': int(prediction) })
+    return jsonify({'Prediction': int(prediction) })
 
 @app.route('/predictUnnamed/<int:v_1>/<int:v_2>/<int:v_3>/<int:v_4>/<int:v_5>/<int:v_6>/<int:v_7>',methods = ['GET','POST'])
 def predict_unnamed(v_1,v_2,v_3,v_4,v_5,v_6,v_7):
